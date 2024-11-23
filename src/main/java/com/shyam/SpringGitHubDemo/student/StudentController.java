@@ -12,6 +12,8 @@ public class StudentController {
 
     @GetMapping
     public List<String> findAllStudents(){
-        return List.of("shyam", "Bhushan", "sundar");
+        return List.of("shyam", "Bhushan", "sundar","Bhushan");
     }
+
+
 }
