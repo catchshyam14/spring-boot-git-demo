@@ -1,5 +1,6 @@
 package com.shyam.SpringGitHubDemo.student;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
@@ -11,7 +12,10 @@ public class StudentController {
 
     private final StudentService studentService;
 
-    public StudentController(StudentService studentService) {
+    public StudentController(
+            @Qualifier("db") StudentService studentService
+            //@Qualifier("DBStudentService") StudentService studentService
+    ) {
         this.studentService = studentService;
     }
 

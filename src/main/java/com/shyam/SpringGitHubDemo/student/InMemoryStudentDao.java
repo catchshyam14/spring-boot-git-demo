@@ -35,7 +35,7 @@ public class InMemoryStudentDao {
                 .filter(index -> STUDENTS.get(index).getEmail().equals(s.getEmail()))
                 .findFirst()
                 .orElse(-1);
-        System.out.println(studentIndex);
+
         if(studentIndex > -1){
             STUDENTS.set(studentIndex, s);
             return  s;
